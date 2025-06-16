@@ -1,0 +1,25 @@
+<suite name="SeleniumTestSuite" parallel="tests" thread-count="2">
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <!-- <parameter name="gridURL" value="http://192.168.31.159:4444/wd/hub"/> -->
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+    <!--    <test name="ChromeTest">-->
+    <!--        <classes>-->
+    <!--            <class name="runners.ChromeTestRunner"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <!--    <test name="FirefoxTest">-->
+    <!--        <classes>-->
+    <!--            <class name="runners.FirefoxTestRunner"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+</suite>

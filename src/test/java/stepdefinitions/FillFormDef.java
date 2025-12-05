@@ -34,6 +34,7 @@ public class FillFormDef extends BasePage {
 
     @When("user fail the scenario in the middle")
     public void userFailTheScenarioInTheMiddle() {
-        Assert.fail("Failed");
+        Assert.assertTrue(RetryTracker.count >= 1, "Failing the scenario intentionally:" + RetryTracker.count);
+        RetryTracker.count++;
     }
 }

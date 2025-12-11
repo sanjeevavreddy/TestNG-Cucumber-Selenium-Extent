@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 import pages.BasePage;
-import utils.RetryTracker;
 
 
 public class FillFormDef extends BasePage {
@@ -30,11 +29,5 @@ public class FillFormDef extends BasePage {
     @Then("user should see the success message")
     public void user_should_see_the_success_message() {
         // Write code here that turns the phrase above into concrete actions
-    }
-
-    @When("user fail the scenario in the middle")
-    public void userFailTheScenarioInTheMiddle() {
-        Assert.assertTrue(RetryTracker.count >= 1, "Failing the scenario intentionally:" + RetryTracker.count);
-        RetryTracker.count++;
     }
 }
